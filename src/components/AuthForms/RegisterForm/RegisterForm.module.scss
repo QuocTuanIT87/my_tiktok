@@ -1,0 +1,124 @@
+.wrapper {
+    position: relative;
+}
+
+.title {
+    margin-top: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-second);
+    font-size: 3.2rem;
+    margin-bottom: 16px;
+}
+
+.loading {
+    position: absolute;
+    right: calc(var(--search-button-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 42%;
+    color: black;
+    width: 15%;
+    height: 15%;
+}
+
+.loading {
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-input {
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 375px;
+}
+
+.title-phone {
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        color: rgba(22, 24, 35, 1);
+    }
+}
+
+.input-data {
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    height: 44px;
+    width: 375px;
+    display: flex;
+    margin-bottom: 8px;
+    position: relative;
+
+    input {
+        background-color: rgba(22, 24, 35, 0.06);
+        flex: 1;
+        color: rgb(22, 24, 35);
+        font-size: 1.5rem;
+        caret-color: var(--primary);
+        padding-inline-start: 12px;
+    }
+
+    input::placeholder {
+        color: #999; /* Màu chữ nhạt */
+    }
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    position: absolute;
+    right: 0;
+    padding-inline-end: 14px;
+}
+
+.invalid {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.forgot-password {
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        color: rgba(22, 24, 35, 1);
+    }
+}
+
+.button-login {
+    margin-top: 18px;
+    width: 100%;
+    height: 46px;
+}

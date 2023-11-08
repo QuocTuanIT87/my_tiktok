@@ -1,0 +1,97 @@
+.wrapper {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.loading {
+    position: absolute;
+    right: calc(var(--search-button-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 45%;
+    color: black;
+    width: 10%;
+    height: 10%;
+}
+
+.loading {
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.container {
+    width: 400px;
+    height: 194px;
+    padding: 32px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid rgba(22, 24, 35, 0.03);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    animation: showLogoutForm ease 0.3s;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0px 32px;
+    width: 100%;
+    text-align: center;
+    color: rgb(22, 24, 35);
+    word-wrap: break-word;
+    max-width: 18ch;
+}
+
+.button-wrapper {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-cancel {
+    width: 164px;
+    height: 48px;
+    margin: 16px 4px;
+    font-size: 1.6rem;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+@keyframes showLogoutForm {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes hideLogoutForm {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}

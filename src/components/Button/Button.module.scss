@@ -1,0 +1,98 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    min-width: 100px;
+    padding: 8px 24px;
+    font-weight: 700;
+    font-family: var(--font-family);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    user-select: none;
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+        color: rgba(22, 24, 35, 0.75);
+
+        background-color: rgba(22, 24, 35, 0.1);
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 999px;
+    cursor: pointer;
+    color: rgba(22, 24, 35, 0.75);
+    border-style: solid;
+    font-size: 1.4rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+//Button Type
+.primary {
+    background-color: var(--primary);
+    color: var(--white);
+
+    &:hover {
+        border-color: var(--primary);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+}
+
+.outline {
+    color: var(--primary);
+    border-color: currentColor;
+
+    &:hover {
+        border-color: currentColor;
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+//Button Size
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}
+
+.white {
+    padding: 0 16px;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 1);
+    height: 36px;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}

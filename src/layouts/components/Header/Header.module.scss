@@ -1,0 +1,124 @@
+.wrapper {
+    --search-border-radius: 92px;
+    --search-button-width: 52px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: var(--default-layout-header-high);
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    background-color: var(--body-background);
+}
+
+.inner {
+    height: var(--default-layout-header-high, 60px);
+    width: var(--default-layout-width);
+    padding: 0 var(--default-layout-horizontal-spacer);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+}
+
+.reel-tok {
+    position: relative;
+    top: 10px;
+    left: -42px;
+    width: 220px;
+    height: 140px;
+}
+
+.tiktok-logo path {
+    fill: var(--white-logo);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.more-btn {
+    font-size: 2rem;
+    margin-left: 20px;
+    margin-right: 6px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.action-btn {
+    position: relative;
+    color: #161823;
+    font-size: 2.1rem;
+    background-color: transparent;
+    padding: 4px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.upload-btn {
+    margin-right: 16px;
+    padding: 0 16px;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 1);
+    height: 35px;
+    min-width: 80px;
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.plus-icon {
+    padding-left: 2px;
+    margin-right: 10px;
+}
+
+.badge {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: var(--font-family);
+    background-color: var(--primary);
+}
+
+.space {
+    margin-right: 16px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 14px;
+    cursor: pointer;
+}

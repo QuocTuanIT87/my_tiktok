@@ -1,0 +1,239 @@
+.wrapper {
+    --bottom-default-video: 20px;
+    --width-default-video: 320px;
+    --height-default-video: 560px;
+
+    position: relative;
+    display: flex;
+    margin-left: 70px;
+    flex-direction: column;
+}
+
+.icons-video {
+    position: absolute;
+    right: calc(((var(--width-default-content) - var(--width-default-video)) / 2 + 48px));
+    bottom: var(--bottom-default-video);
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card {
+    width: var(--width-default-video);
+    height: var(--height-default-video);
+    margin-bottom: 20px;
+    margin-top: -50px;
+    top: 0;
+    cursor: pointer;
+    &:hover {
+        .play-pause,
+        .volume-icon {
+            opacity: 1;
+        }
+        .time-video {
+            display: flex;
+        }
+    }
+
+    video {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+.controls {
+    position: relative;
+}
+
+.play-pause {
+    position: absolute;
+    bottom: 22px;
+    left: 8px;
+    opacity: 0;
+    padding: 12px;
+    transition: 0.2s;
+}
+
+.controls-volume {
+    position: absolute;
+    right: 16px;
+    bottom: 50px;
+    &:hover {
+        .change-volume {
+            display: flex;
+        }
+    }
+}
+
+.sound-mute {
+    position: absolute;
+    bottom: -16px;
+    right: 4px;
+}
+
+.change-volume {
+    display: none;
+    cursor: initial;
+    position: relative;
+    width: 24px;
+    height: 64px;
+    bottom: 20px;
+    right: 6px;
+    background: rgba(22, 24, 35, 0.34);
+    border-radius: 32px;
+
+    input {
+        -webkit-appearance: none;
+        background-color: rgba(255, 255, 255, 0.34);
+        transform: rotate(-90deg);
+        height: 2px;
+        width: 46px;
+        position: absolute;
+        right: -10px;
+        bottom: 30px;
+        border-radius: 4px;
+        caret-color: transparent;
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}
+
+.time-video {
+    width: 200px;
+    height: 16px;
+    padding-inline: 12px;
+    position: absolute;
+    left: 184px;
+    bottom: 20px;
+    margin-left: 32px;
+    cursor: initial;
+    //Sửa lại thành none
+    display: none;
+
+    &:hover {
+        .range-progess,
+        input {
+            height: 4px;
+            &::-webkit-slider-thumb {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.control-time {
+    .range {
+        appearance: none;
+        background: rgba(255, 255, 255, 0.34);
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        right: 200px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        caret-color: transparent;
+        &::-webkit-slider-thumb {
+            appearance: none;
+            background-color: #fff;
+            //sửa lại thành 0
+            opacity: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+
+            cursor: pointer;
+        }
+    }
+}
+
+// slide bar not smooth
+// cursor: pointer not smooth
+.range-progess {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 200px;
+    top: 44%;
+    transform: translateY(-50%);
+
+    transform-origin: left center;
+    // transform: scaleX(1) translateY(-50%);
+}
+
+.timeon {
+    flex: 0 0 68px;
+
+    margin-inline-start: 8px;
+    font-size: 10px;
+    line-height: 16px;
+    color: rgb(255, 255, 255);
+
+    text-align: end;
+    white-space: nowrap;
+    font-feature-settings: 'tnum';
+    font-variant-numeric: tabular-nums;
+    font-family: Tahoma;
+}
+
+.mute-icon {
+    opacity: 1;
+}
+.volume-icon {
+    opacity: 0;
+    transition: 0.2s;
+}
+
+button {
+    background-color: transparent;
+}
+
+// Thẻ dùng setRef autoplay video
+.autoplay-video-ref {
+    margin-bottom: 20px;
+}
+
+.cover-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: all 200ms ease-in-out 0s;
+    background-color: rgba(22, 24, 35, 0.06);
+    margin-top: 8px;
+    margin-bottom: 6px;
+    cursor: pointer;
+
+    &:hover {
+        background-position: right;
+        animation: animate 0.8s steps(28) 1;
+    }
+}
+
+.count-icon {
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 12px;
+    line-height: 17px;
+}
+
+@keyframes animate {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}

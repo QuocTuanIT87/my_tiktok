@@ -1,0 +1,219 @@
+.modal-mask {
+    --height-default-modal: 732px;
+    --width--default-modal: 764px;
+
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.notify {
+    top: 60px;
+    position: absolute;
+    z-index: 999;
+    width: 768px;
+    padding: 10px 8px;
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 21px;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 2px;
+    background: rgba(22, 24, 35, 0.67);
+    backdrop-filter: blur(5px);
+    animation: slideAnimation 2.5s ease-in-out forwards;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateY(-60px);
+    }
+    15% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-110px);
+    }
+}
+
+.wrapper {
+    width: var(--width--default-modal);
+    height: var(--height-default-modal);
+    border-radius: 8px;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    animation: showEditForm ease 0.3s;
+    position: relative;
+}
+
+.loading {
+    position: absolute;
+    right: calc(var(--search-button-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 42%;
+    color: black;
+    width: 15%;
+    height: 15%;
+}
+
+.loading {
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.text-header {
+    font-family: Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: rgb(22, 24, 35);
+    position: relative;
+    left: 26px;
+}
+
+.header {
+    width: 100%;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(22, 24, 35, 0.2);
+}
+
+.edit-name {
+    border-bottom: 0.5px solid rgba(22, 24, 35, 0.2);
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.edit {
+    border-bottom: 0.5px solid rgba(22, 24, 35, 0.2);
+    width: 100%;
+    height: 130px;
+    position: relative;
+}
+
+.text {
+    font-family: Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    line-height: 24px;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 26px;
+    left: 26px;
+}
+
+.change-avatar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-profile {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.input-file {
+    display: none;
+}
+
+.label-upload {
+    position: absolute;
+    bottom: -16px;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+    background-color: red;
+}
+
+.cover-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-data {
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    height: 50px;
+    width: 500px;
+    display: flex;
+    position: relative;
+    transform: translateY(50%);
+
+    input {
+        background-color: rgba(22, 24, 35, 0.06);
+        flex: 1;
+        color: rgb(22, 24, 35);
+        font-size: 1.8rem;
+        caret-color: var(--primary);
+        padding-inline-start: 12px;
+    }
+
+    input::placeholder {
+        color: #999; /* Màu chữ nhạt */
+    }
+}
+
+.footer {
+    position: absolute;
+    right: 24px;
+    bottom: 12px;
+}
+
+.button-cancel {
+    margin-right: 18px;
+}
+
+.close-btn {
+    position: absolute; /* Thay đổi thành absolute */
+    top: 15px;
+    right: 15px;
+    -webkit-box-align: center;
+    -webkit-box-align: center;
+    border-radius: 50%;
+    background: rgba(22, 24, 35, 0.03);
+    width: 41px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@keyframes showEditForm {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

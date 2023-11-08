@@ -1,0 +1,11 @@
+.wrapper {
+    --width-default-content: 692px;
+
+    width: var(--width-default-content);
+    margin-left: 528px;
+    margin-right: auto;
+}
+
+.video-item {
+    border-bottom: 1px solid #eaeaeb;
+}

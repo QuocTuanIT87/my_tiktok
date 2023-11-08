@@ -1,0 +1,43 @@
+:root {
+    --body-background: #fff;
+    --search-background: rgba(22, 24, 35, 0.06);
+    --placehoder-search: #000;
+}
+
+[data-theme='dark'] {
+    --body-background: rgb(18, 18, 18);
+    --white-logo: #fff;
+    --search-background: rgba(255, 255, 255, 0.12);
+    --placehoder-search: #fff;
+}
+
+* {
+    transition: all 0.1s ease-in-out;
+}
+
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: rgb(255, 255, 255);
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.8);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        top: -8px;
+    }
+}
+
+body.hidden {
+    overflow: hidden;
+}

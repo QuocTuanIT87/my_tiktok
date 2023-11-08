@@ -1,0 +1,237 @@
+.comment-mask {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.notify {
+    top: 30px;
+    position: absolute;
+    z-index: 999;
+    width: 768px;
+    padding: 10px 8px;
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 21px;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 2px;
+    background: rgba(22, 24, 35, 0.67);
+    backdrop-filter: blur(5px);
+    animation: slideAnimation 2.5s ease-in-out forwards;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateY(-60px);
+    }
+    15% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-90px);
+    }
+}
+
+.loading {
+    position: absolute;
+    right: calc(var(--search-button-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    width: 15%;
+    height: 15%;
+}
+
+.loading {
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.close-btn {
+    position: absolute; /* Thay đổi thành absolute */
+    top: 15px;
+    left: 15px;
+    -webkit-box-align: center;
+    -webkit-box-align: center;
+    border-radius: 50%;
+    background: rgba(84, 84, 84, 0.5);
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        background-color: rgba(37, 37, 37, 0.6);
+    }
+}
+
+.more-btn {
+    position: absolute; /* Thay đổi thành absolute */
+    top: 15px;
+    right: 15px;
+    -webkit-box-align: center;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.content-video {
+    width: 992px;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.right-side {
+    flex: 1;
+    background-color: white;
+}
+
+.desc {
+}
+
+.comment {
+}
+
+// Menu Wrapper
+.menu-list {
+    width: 150px;
+    height: 110px;
+}
+
+.menu-popper {
+    font-size: 1.8rem;
+    display: flex;
+    font-weight: 600;
+    padding: 0 8px 0 20px;
+    justify-content: center;
+}
+
+.line-1 {
+    border-bottom: 1px solid #eaeaeb;
+    padding: 14px 0;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--primary);
+    }
+}
+
+.line-2 {
+    padding: 14px 0;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--primary);
+    }
+}
+
+//Here
+.wrapper-delete {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.container-delete {
+    width: 400px;
+    height: 194px;
+    padding: 32px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid rgba(22, 24, 35, 0.03);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    animation: showDeleteForm ease 0.3s;
+}
+
+.title-delete {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0px 32px;
+    width: 100%;
+    text-align: center;
+    color: rgb(22, 24, 35);
+    word-wrap: break-word;
+    max-width: 18ch;
+}
+
+.button-wrapper-delete {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-cancel {
+    width: 164px;
+    height: 48px;
+    margin: 16px 4px;
+    font-size: 1.6rem;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+@keyframes showDeleteForm {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes hideLogoutForm {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}

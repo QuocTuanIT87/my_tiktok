@@ -1,0 +1,123 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
+    margin-top: 24px;
+    background-color: red;
+    height: 70%;
+    width: 92%;
+    background: rgba(22, 24, 35, 0.03);
+    border-radius: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    left: 14px;
+}
+
+.menu-popper {
+    width: 320px;
+}
+
+.name-header {
+    font-family: var(--font-family-second);
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 25px;
+    cursor: pointer;
+    position: relative;
+    left: 70px;
+    top: -72px;
+    width: 300px;
+}
+
+.nickname {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.fullname {
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 28px;
+    position: absolute;
+    left: 2px;
+    top: 28px;
+}
+
+.check {
+    margin-right: 4px;
+}
+
+.description {
+    word-wrap: break-word;
+    max-width: 52ch;
+    position: relative;
+    left: 20px;
+    top: -30px;
+    font-family: var(--font-family);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.music-icon {
+    margin-right: 6px;
+    position: relative;
+    left: 24px;
+    bottom: -54px;
+}
+
+.music-name {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 22px;
+    display: inline-block;
+    position: relative;
+    bottom: -50px;
+    left: 30px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.button-follow {
+    position: absolute;
+    right: 10px;
+    top: 28px;
+    font-weight: 600;
+    height: 40px;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.button-following {
+    position: absolute;
+    border-radius: 4px;
+    background-color: white;
+    right: 10px;
+    top: 28px;
+    line-height: 22px;
+    font-weight: 600;
+    height: 42px;
+    cursor: pointer;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    font-family: var(--font-family);
+    font-size: 1.8rem;
+    width: 110px;
+    padding: 0px 10px;
+    user-select: none;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}

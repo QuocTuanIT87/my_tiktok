@@ -1,0 +1,101 @@
+// Menu Wrapper
+.menu-list {
+    width: 234px;
+
+    .menu-item {
+        margin-left: 0px;
+    }
+}
+
+.menu-popper {
+    padding-bottom: 8px;
+}
+.menu-body {
+    overflow-y: auto;
+}
+
+.cover {
+    position: relative;
+}
+
+.menu-item {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 0;
+    padding: 11px 16px;
+    box-sizing: border-box;
+    line-height: 1.8rem;
+
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}
+
+//Header
+
+.header {
+    position: relative;
+    flex-shrink: 0;
+    height: 50px;
+    margin-top: -8px;
+}
+
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: absolute;
+    right: 54px;
+    bottom: 38px;
+}
+
+#check {
+    display: none;
+}
+
+.dark-mode {
+    position: absolute;
+    background: rgba(22, 24, 35, 0.12);
+    border-radius: 100px;
+    width: 44px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.dark-mode::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+    background-color: rgb(255, 255, 255);
+    width: 20px;
+    height: 20px;
+    border-radius: 200px;
+    transition: all 0.25s ease-out;
+}
+
+#check:checked + .dark-mode {
+    background: rgb(11, 224, 155);
+    width: 45px;
+    height: 25px;
+}
+
+#check:checked + .dark-mode::before {
+    transform: translate(19px, -50%);
+}

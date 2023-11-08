@@ -1,0 +1,96 @@
+.search,
+.search-result {
+    width: 470px;
+}
+
+.search {
+    position: relative;
+    height: 45px;
+    margin-left: 156px;
+    padding-left: 16px;
+    display: flex;
+    background-color: var(--search-background);
+    border-radius: var(--search-border-radius);
+    border: 1px solid transparent;
+
+    input {
+        flex: 1;
+        color: var(--placehoder-search);
+        caret-color: var(--primary);
+        font-size: 1.6rem;
+        padding: 12px 0;
+        padding-right: 40px;
+        background-color: transparent;
+        font-family: var(--font-family);
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
+    }
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        .search-btn {
+            background-color: rgba(22, 24, 35, 0.09);
+            color: rgb(22, 24, 35);
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 9px;
+        right: var(--search-button-width);
+        height: 28px;
+        width: 1px;
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+}
+
+.search-title {
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+.clear-btn,
+.loading {
+    position: absolute;
+    right: calc(var(--search-button-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(22, 24, 35, 0.34);
+}
+
+.loading {
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.search-btn {
+    width: var(--search-button-width);
+    border-top-right-radius: var(--search-border-radius);
+    border-bottom-right-radius: var(--search-border-radius);
+    color: rgba(22, 24, 35, 0.34);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.05);
+        cursor: pointer;
+    }
+}
+
+.search-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}

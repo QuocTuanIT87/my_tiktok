@@ -1,0 +1,22 @@
+.wrapper {
+    width: 225px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 20px 0 26px 8px;
+    margin-left: -11px;
+    overflow-y: scroll;
+
+    &:hover {
+        transition: opacity 2s ease;
+    }
+
+    &:not(:hover)::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+}
+
+.menu {
+    padding-bottom: 8px;
+    margin-top: 60px;
+}

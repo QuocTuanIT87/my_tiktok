@@ -1,0 +1,166 @@
+.modal-mask {
+    --height-default-modal: 596px;
+    --width--default-modal: 483px;
+
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.notify {
+    top: 30px;
+    position: absolute;
+    z-index: 999;
+    width: 768px;
+    padding: 10px 8px;
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 21px;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 2px;
+    background: rgba(22, 24, 35, 0.67);
+    backdrop-filter: blur(5px);
+    animation: slideAnimation 2s ease-in-out forwards;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateY(-60px);
+    }
+    15% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-110px);
+    }
+}
+
+.wrapper {
+    width: var(--width--default-modal);
+    height: var(--height-default-modal);
+    border-radius: 8px;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    animation: showLoginForm ease 0.3s;
+    position: relative;
+}
+
+.container {
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.back-icon {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 48px;
+    bottom: 136px;
+    overflow: auto;
+}
+
+.keep-stable {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.policy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    padding: 16px;
+    border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+
+    p {
+        color: rgba(22, 24, 35, 0.5);
+        font-size: 1.2rem;
+        line-height: 15px;
+        width: 375px;
+        text-align: center;
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.footer {
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: var(--white);
+
+    span {
+        padding-left: 5px;
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 18px;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+.close-btn {
+    position: absolute; /* Thay đổi thành absolute */
+    top: 15px;
+    right: 15px;
+    -webkit-box-align: center;
+    -webkit-box-align: center;
+    border-radius: 50%;
+    background: rgba(22, 24, 35, 0.03);
+    width: 41px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@keyframes showLoginForm {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
